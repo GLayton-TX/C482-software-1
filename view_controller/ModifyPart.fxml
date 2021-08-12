@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="455.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_controller.ModifyPart">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="104.0" minWidth="10.0" prefWidth="103.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="135.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="118.0" minWidth="0.0" prefWidth="97.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.0" minWidth="10.0" prefWidth="119.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Label text="Modify Part">
+            <GridPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </GridPane.margin>
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="inHouseRadioButton" mnemonicParsing="false" onAction="#inHouseRadioButtonSelected" text="In-House" GridPane.columnIndex="2">
+            <GridPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </GridPane.margin>
+        </RadioButton>
+        <RadioButton fx:id="outsourcedRadioButton" mnemonicParsing="false" onAction="#outsourcedRadioButtonSelected" text="Outsourced" GridPane.columnIndex="3">
+            <GridPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </GridPane.margin>
+        </RadioButton>
+        <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonClicked" text="Save" GridPane.columnIndex="2" GridPane.rowIndex="7">
+            <GridPane.margin>
+                <Insets bottom="10.0" left="30.0" right="10.0" top="10.0" />
+            </GridPane.margin>
+        </Button>
+        <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonClicked" text="Cancel" GridPane.columnIndex="3" GridPane.rowIndex="7">
+            <GridPane.margin>
+                <Insets bottom="10.0" left="30.0" right="10.0" top="10.0" />
+            </GridPane.margin>
+        </Button>
+        <Label text="ID" GridPane.rowIndex="1">
+            <GridPane.margin>
+                <Insets left="20.0" />
+            </GridPane.margin>
+        </Label>
+        <Label text="Name" GridPane.rowIndex="2">
+            <GridPane.margin>
+                <Insets left="20.0" />
+            </GridPane.margin>
+        </Label>
+        <Label text="Stock" GridPane.rowIndex="3">
+            <GridPane.margin>
+                <Insets left="20.0" />
+            </GridPane.margin>
+        </Label>
+        <Label text="Price/Cost" GridPane.rowIndex="4">
+            <GridPane.margin>
+                <Insets left="20.0" />
+            </GridPane.margin>
+        </Label>
+        <Label text="Max" GridPane.rowIndex="5">
+            <GridPane.margin>
+                <Insets left="20.0" />
+            </GridPane.margin>
+        </Label>
+        <Label fx:id="sourceLabel" text="Machine ID" GridPane.rowIndex="6">
+            <GridPane.margin>
+                <Insets left="5.0" />
+            </GridPane.margin>
+        </Label>
+        <Label alignment="CENTER" text="Min" GridPane.columnIndex="2" GridPane.rowIndex="5">
+            <GridPane.margin>
+                <Insets left="45.0" />
+            </GridPane.margin>
+        </Label>
+        <TextField fx:id="idField" disable="true" promptText="Auto-generated" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <GridPane.margin>
+                <Insets left="5.0" right="5.0" />
+            </GridPane.margin>
+        </TextField>
+        <TextField fx:id="nameField" promptText="Enter a name" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <GridPane.margin>
+                <Insets left="5.0" right="5.0" />
+            </GridPane.margin>
+        </TextField>
+        <TextField fx:id="stockField" promptText="Enter quantity" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <GridPane.margin>
+                <Insets left="5.0" right="5.0" />
+            </GridPane.margin>
+        </TextField>
+        <TextField fx:id="priceField" promptText="Enter ammount" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <GridPane.margin>
+                <Insets left="5.0" right="5.0" />
+            </GridPane.margin>
+        </TextField>
+        <TextField fx:id="maxField" promptText="Max quantity" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <GridPane.margin>
+                <Insets left="5.0" right="5.0" />
+            </GridPane.margin>
+        </TextField>
+        <TextField fx:id="sourceField" promptText="Enter Source" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <GridPane.margin>
+                <Insets left="5.0" right="5.0" />
+            </GridPane.margin>
+        </TextField>
+        <TextField fx:id="minField" promptText="Min quantity" GridPane.columnIndex="3" GridPane.rowIndex="5">
+            <GridPane.margin>
+                <Insets left="5.0" right="15.0" />
+            </GridPane.margin>
+        </TextField>
+    </children>
+</GridPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="522.0" prefWidth="700.0" style="-fx-border-style: solid; -fx-border-insets: 5; -fx-border-radius: 15; -fx-border-width: 2;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_controller.ModifyProduct">
+   <children>
+      <Label layoutX="27.0" layoutY="14.0" text="Modify Product">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="partsSearchField" layoutX="460.0" layoutY="24.0" onAction="#partsSearchFieldClicked" prefHeight="27.0" prefWidth="181.0" promptText="Search by Product Name or ID" />
+      <TableView fx:id="partsTable" layoutX="350.0" layoutY="59.0" prefHeight="160.0" prefWidth="340.0">
+          <placeholder>
+              <Label text="No Parts Found">
+                  <font>
+                      <Font name="System Bold" size="24.0" />
+                  </font>
+              </Label>
+          </placeholder>
+        <columns>
+            <TableColumn fx:id="partIdColumn" prefWidth="75.0" text="Part ID" />
+            <TableColumn fx:id="partNameColumn" prefWidth="100.0" text="Part Name" />
+            <TableColumn fx:id="partQuantityColumn" prefWidth="75.0" text="Quantity" />
+            <TableColumn fx:id="partPriceColumn" prefWidth="100.0" text="Price/Cost" />
+        </columns>
+      </TableView>
+      <TableView fx:id="associatedPartTable" layoutX="350.0" layoutY="276.0" prefHeight="160.0" prefWidth="340.0">
+          <placeholder>
+              <Label text="No Parts Found">
+                  <font>
+                      <Font name="System Bold" size="24.0" />
+                  </font>
+              </Label>
+          </placeholder>
+        <columns>
+            <TableColumn fx:id="associatedPartIdColumn" prefWidth="75.0" text="Part ID" />
+            <TableColumn fx:id="associatedPartNameColumn" prefWidth="100.0" text="Part Name" />
+            <TableColumn fx:id="associatedPartQuantityColumn" prefWidth="75.0" text="Quantity" />
+            <TableColumn fx:id="associatedPartPriceColumn" prefWidth="100.0" text="Price/Cost" />
+        </columns>
+      </TableView>
+      <Button fx:id="addAssociatedPartButton" layoutX="553.0" layoutY="233.0" mnemonicParsing="false" onAction="#addAssociatedPartButtonClicked" text="Add Associated Part" />
+      <Button fx:id="cancelButton" layoutX="626.0" layoutY="479.0" mnemonicParsing="false" onAction="#cancelButtonClicked" text="Cancel" />
+      <Button fx:id="saveButton" layoutX="532.0" layoutY="479.0" mnemonicParsing="false" onAction="#saveButtonClicked" prefHeight="27.0" prefWidth="55.0" text="Save" />
+      <Button fx:id="removeAssociatedPartButton" layoutX="531.0" layoutY="443.0" mnemonicParsing="false" onAction="#removeAssociatedPartButtonClicked" prefHeight="27.0" prefWidth="153.0" text="Remove Associated Part" />
+      <Label layoutX="27.0" layoutY="59.0" text="Product ID" />
+      <Label layoutX="27.0" layoutY="89.0" text="Name" />
+      <Label layoutX="29.0" layoutY="119.0" text="Inventory" />
+      <Label layoutX="27.0" layoutY="149.0" text="Price" />
+      <Label layoutX="27.0" layoutY="179.0" text="Max" />
+      <Label layoutX="178.0" layoutY="179.0" text="Min" />
+      <TextField fx:id="idField" disable="true" layoutX="120.0" layoutY="54.0" promptText="Auto-generated" />
+      <TextField fx:id="nameField" layoutX="120.0" layoutY="84.0" promptText="Enter product name" />
+      <TextField fx:id="stockField" layoutX="120.0" layoutY="114.0" promptText="Enter quantity" />
+      <TextField fx:id="priceField" layoutX="120.0" layoutY="144.0" promptText="Enter Price" />
+      <TextField fx:id="maxField" layoutX="58.0" layoutY="174.0" prefHeight="27.0" prefWidth="100.0" promptText="Enter maximum" />
+      <TextField fx:id="minField" layoutX="204.0" layoutY="174.0" prefHeight="27.0" prefWidth="100.0" promptText="Enter minimum" />
+   </children>
+</AnchorPane>
